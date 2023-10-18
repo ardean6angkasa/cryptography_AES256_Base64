@@ -1,5 +1,5 @@
 # cryptography_AES256_Base64
-preview encryption using two algorithms: AES 256 + Base64
+Preview encryption using two algorithms: AES 256 + Base64
 
 ![image](https://github.com/reza7angkasa/cryptography_AES256_Base64/assets/72240159/5eac5c43-19ef-44dc-b3a8-cd6ac851c35a)
 
@@ -11,7 +11,7 @@ preview encryption using two algorithms: AES 256 + Base64
 
 ![image](https://github.com/reza7angkasa/cryptography_AES256_Base64/assets/72240159/a9428f04-a5b3-4483-aaf0-bb32651fef0d)
 
-data in the database is encrypted in AES 256 bit and Base64 encoding, both algorithm mixed into one to create a strong ecnryption for a cryptogtraphy tool.
+Data in the database is encrypted in AES 256 bit and Base64 encoding, both algorithm mixed into one to create a strong ecnryption for a cryptogtraphy tool.
 
 ![image](https://github.com/reza7angkasa/cryptography_AES256_Base64/assets/72240159/7c1b7b73-5e48-48ce-abfb-de7f6174c5b9)
 
