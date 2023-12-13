@@ -5,12 +5,12 @@ use CodeIgniter\Model;
 
 class Cryptograph extends Model
 {
-    protected $table = 'cryptool';
+    protected $table = 'testing';
     protected $primaryKey = 'id';
     protected $allowedFields = ['text'];
     public function getData()
     {
-        $builder = $this->db->table('cryptool');
+        $builder = $this->db->table('testing');
         return $builder->get();
     }
 
