@@ -94,7 +94,7 @@ class Home extends BaseController
 
     public function create_key_AES265()
     {
-        // fedfwefewfwef
+        // fedfwefewfwefijijio
         // hit this to create a key for your AES encryption, copy your key and paste it in `app/Config/Encryption.php`
         $key = \CodeIgniter\Encryption\Encryption::createKey();
         echo $key;
