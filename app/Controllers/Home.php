@@ -94,8 +94,48 @@ class Home extends BaseController
 
     public function create_key_AES265()
     {
+        // dsfsdfsd
+        $arrayHeader = array(
+            'Content-Type' => 'application/json'
+        );
+        $postData = array(
+            "partnerReferenceNo" => "210987654399",
+            "sourceAccountNo" => "123",
+            "beneficiaryBankCode" => "123",
+            "beneficiaryAccountNo" => "9876543210987654321",
+            "beneficiaryAccountName" => "test",
+            "transactionDate" => "2023-12-04T09:46:05+00:00",
+            "amount" => array(
+                "value" => "16500.00",
+                "currency" => "IDR"
+            ),
+            "additionalInfo" => array(
+                "msgId" => "123",
+                "disbDescription" => "test",
+                "disbCategory" => "Ecommerce",
+                "senderInfo" => array(
+                    "name" => "test",
+                    "accountType" => "SAVING",
+                    "accountInstId" => "123",
+                    "country" => "IND",
+                    "city" => "Tangerang"
+                ),
+                "dspsign" => "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDE5MTc2NDIsImV4cCI6MTcwMTkyMTI0Mn0.LZTGoirJMLBVyloQj0WWx5Wim6QR6HFIcDgi0wQPDa0"
+            )
+        );
+
+        $url = 'http://localhost:3000/api/disbursementExecution';
+        $client = \Config\Services::curlrequest();
+        foreach ($arrayHeader as $name => $value) {
+            $client->setHeader($name, $value);
+        }
+
+        $response = $client->setBody(json_encode($postData))->post($url);
+        $responseData = json_decode($response->getBody(), true);
+        echo "<br>cek 9 ";
+        print_r($responseData);
         // hit this to create a key for your AES encryption, copy your key and paste it in `app/Config/Encryption.php`
-        $key = \CodeIgniter\Encryption\Encryption::createKey();
-        echo $key;
+        // $key = \CodeIgniter\Encryption\Encryption::createKey();
+        // echo $key;
     }
 }
