@@ -21,8 +21,7 @@ class Encryption extends BaseConfig
      * You need to ensure it is long enough for the cipher and mode you plan to use.
      * See the user guide for more info.
      */
-    public string $key = '�1/Y�N�^�ed�}��!u�i��iέ� �Ș�';
-
+    public string $key = '123456';
     /**
      * --------------------------------------------------------------------------
      * Encryption Driver to Use
