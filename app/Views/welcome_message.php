@@ -114,12 +114,18 @@
                                         <?php foreach ($cryptool as $row): ?>
                                             <div style="text-align: center;">
                                                 <p style="color:black; display: inline;">Your decrypted message: </p>
-                                                <span style="color:black;">
+                                                <span style="color:black;" id="text1">
                                                     <?= $row->text; ?>
                                                 </span>
                                             </div>
                                             <input type="hidden" name="id" value='<?= $row->id; ?>'>
                                         <?php endforeach; ?>
+                                        <br>
+                                        <div style="text-align: center;">
+                                            <button class="copyButton" id="copyButton1" type='button'>
+                                                copy text
+                                            </button>
+                                        </div>
                                         <div style="text-align: right;">
                                             <button type="submit"
                                                 class="btn btn-outline-primary rounded-pill">Encrypt</button>
